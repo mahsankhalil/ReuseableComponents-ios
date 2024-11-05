@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhoneNumberView" customModule="ALW" customModuleProvider="target">
+            <connections>
+                <outlet property="errorLabel" destination="Rnn-eC-d4r" id="l5y-S4-m0Z"/>
+                <outlet property="flagPhoneNumberTextField" destination="H2U-o2-evb" id="pD9-LH-lqS"/>
+                <outlet property="titleLabel" destination="a5z-4P-SVZ" id="hPe-uT-uFf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5z-4P-SVZ">
+                    <rect key="frame" x="5" y="5" width="404" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="7QQ-Hb-F7i"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H2U-o2-evb" customClass="FPNTextField" customModule="FlagPhoneNumber">
+                    <rect key="frame" x="5" y="30" width="404" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="onFocusInInputText:" destination="-1" eventType="editingDidBegin" id="Emb-lE-bej"/>
+                        <action selector="onFoucusOutInputText:" destination="-1" eventType="editingDidEnd" id="hty-u7-D0N"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnn-eC-d4r">
+                    <rect key="frame" x="5" y="80" width="404" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="opb-YW-uLE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    </variation>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Rnn-eC-d4r" secondAttribute="bottom" constant="5" id="7kX-Fo-d2L"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="a5z-4P-SVZ" secondAttribute="trailing" constant="5" id="JuA-A6-5CL"/>
+                <constraint firstItem="Rnn-eC-d4r" firstAttribute="leading" secondItem="H2U-o2-evb" secondAttribute="leading" id="Ks8-Va-4sx"/>
+                <constraint firstItem="a5z-4P-SVZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="Lhw-VX-0WT"/>
+                <constraint firstItem="Rnn-eC-d4r" firstAttribute="trailing" secondItem="H2U-o2-evb" secondAttribute="trailing" id="MrE-yE-62R"/>
+                <constraint firstItem="a5z-4P-SVZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="NCK-VW-zBk"/>
+                <constraint firstItem="Rnn-eC-d4r" firstAttribute="top" secondItem="H2U-o2-evb" secondAttribute="bottom" constant="2" id="P9k-iO-Rlp"/>
+                <constraint firstItem="H2U-o2-evb" firstAttribute="top" secondItem="a5z-4P-SVZ" secondAttribute="bottom" constant="5" id="aoM-EY-q9e"/>
+                <constraint firstItem="H2U-o2-evb" firstAttribute="leading" secondItem="a5z-4P-SVZ" secondAttribute="leading" id="ezd-k3-zxh"/>
+                <constraint firstItem="H2U-o2-evb" firstAttribute="trailing" secondItem="a5z-4P-SVZ" secondAttribute="trailing" id="yl0-iU-8Ok"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="141" y="79"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
